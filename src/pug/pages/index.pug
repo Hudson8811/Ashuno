@@ -1,0 +1,30 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	.preload
+		.preload__back 
+		.preload__body
+			.preload__titles.general-title
+				.preload__title.preload__title--withoutanim ASHUNO
+				.preload__title.preload__title--anim ASHUNO
+			.preload__subtitle.general-subtitle КАЧЕСТВЕННЫЕ ЗАПЧАСТИ
+	.screens
+		.screens__swiper.swiper 
+			.screens__swiper-wrapper.swiper-wrapper 
+				.screens__slide.swiper-slide 
+					include ../screens/screen1
+				.screens__slide.swiper-slide 
+					include ../screens/screen2
+				.screens__slide.swiper-slide 
+					include ../screens/screen3
+				.screens__slide.swiper-slide 
+					include ../screens/screen4
+				.screens__slide.swiper-slide 
+					include ../screens/screen5
+		.screens-pagination.class-desktop
