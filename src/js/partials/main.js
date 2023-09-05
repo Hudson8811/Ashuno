@@ -126,8 +126,8 @@ var header_screen1_search_wrapper = new Swiper(".header-screen1__search-wrapper"
 var screen3_swiper = new Swiper(".screen3__swiper", {
 	slidesPerView: '4',
 	navigation: {
-		nextEl: ".screen3__swiper-wrapper .swiper-arrow.swiper-arrow-next",
-		prevEl: ".screen3__swiper-wrapper .swiper-arrow.swiper-arrow-prev",
+		nextEl: ".screen3__swiper-arrow-next",
+		prevEl: ".screen3__swiper-arrow-prev",
 	}
 });
 
@@ -285,8 +285,8 @@ $(document).ready(function () {
 			$(this).addClass('js-active');
 			$('.screen4__center').addClass('js-active');
 			var cardImage = $(this).children('.card-screen4__image').html();
-			$('.screen4__center-inner').html(cardImage);
-			$('.screen4__center-inner').removeClass('js-active');
+			$('.screen4__center-inner').html(cardImage);/* 
+			$('.screen4__center-inner').removeClass('js-active'); */
 			setTimeout(function () {
 				$('.screen4__center-inner').addClass('js-active');
 			}, 100);

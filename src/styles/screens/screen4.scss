@@ -67,7 +67,7 @@
 		position: relative;
 		width: 550px;
 		max-width: 100%;
-		opacity: 0;
+		opacity: 1;
 		transition: all 0.3s ease 0s;
 		@media (max-width: 1920px){
 			width: 28.65vw;
@@ -92,7 +92,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			opacity: 0;
+			opacity: 1;
 			transition: all 0.3s ease 0s;
 			@media (max-width: 1024px){
 				opacity: 1;
@@ -103,6 +103,8 @@
 				width: 32.89vw;
 			}
 			img {
+				position: relative;
+				z-index: 2;
 				width: 331px;
 				@media (max-width: 1920px){
 					width: 17.24vw;
