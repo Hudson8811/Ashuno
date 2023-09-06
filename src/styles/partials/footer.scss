@@ -3,7 +3,7 @@
   z-index: 2;
   background-color: #f2f4f6;
   transition: all 0.7s ease 0s;
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     margin-top: 3.26vw;
@@ -24,7 +24,7 @@
       width: 62.5vw;
       height: 3.13vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       width: 100%;
       height: 6.51vw;
       background: url("../images/footer-writing-mob.png") 0 0 / 100% 100%
@@ -40,7 +40,7 @@
   }
   &__container {
     position: relative;
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       order: -1;
     }
   }
@@ -48,7 +48,7 @@
   }
   &__row {
     display: flex;
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       justify-content: space-between;
       align-items: flex-end;
     }
@@ -61,7 +61,7 @@
       }
       &-wrapper {
         display: block;
-        @media (max-width: 1023px) {
+        @media (max-width: 1024px) {
           display: none;
         }
       }
@@ -75,7 +75,7 @@
     &-big {
       &-wrapper {
         display: none;
-        @media (max-width: 1023px) {
+        @media (max-width: 1024px) {
           display: block;
         }
       }
@@ -134,7 +134,7 @@
     @media (max-width: 1919px) {
       height: 1.2vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       height: 13.02vw;
     }
   }
@@ -168,7 +168,7 @@
       width: 6.25vw;
       height: 6.25vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       width: 8.85vw;
       height: 8.85vw;
       top: auto;
@@ -188,7 +188,7 @@
         width: 11.98vw;
         height: 3.91vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         width: 18.88vw;
         height: 6.5vw;
       }
@@ -206,7 +206,7 @@
       @media (max-width: 1919px) {
         bottom: calc(50% - 0.42vw);
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         display: none;
       }
     }
@@ -230,7 +230,7 @@
       background-color: #f2f4f6;
       border-radius: 6.25vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       background: url("../images/arrow-red.svg") center / 3.34vw 2.3vw no-repeat;
       border-block-color: #f2f4f6;
       background-color: #f2f4f6;
@@ -253,7 +253,7 @@
   @media (max-width: 1919px) {
     padding: 3.65vw 0;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     padding: 5.21vw 0 3.26vw;
   }
   &__left {
@@ -269,7 +269,7 @@
       padding-left: 1.56vw;
       flex: 0 1 17.71vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       font-size: 1.56vw;
       padding: 0;
       flex: 1 1 auto;
@@ -282,7 +282,7 @@
       @media (max-width: 1919px) {
         max-width: 8.85vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         color: var(--5, #7f89a7);
         font-style: normal;
         font-weight: 500;
@@ -303,7 +303,7 @@
         max-width: 15.63vw;
         margin-top: 1.04vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         max-width: 20.57vw;
         margin: 0;
       }
@@ -341,7 +341,7 @@
       @media (max-width: 1919px) {
         font-size: 1.46vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         font-size: 1.95vw;
         order: -2;
       }
@@ -355,7 +355,7 @@
       @media (max-width: 1919px) {
         margin-top: 0.78vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         font-size: 1.56vw;
         margin-top: 3.26vw;
         order: -1;

@@ -129,7 +129,7 @@ body {
             opacity: 1 !important;
             pointer-events: auto;
           }
-          @media (max-width: 1023px) {
+          @media (max-width: 1024px) {
             opacity: 1 !important;
             pointer-events: auto;
           }
@@ -358,7 +358,7 @@ body * {
   @media (max-width: 1919px) {
     width: 62.5vw;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     width: 100%;
     padding: 0 12.24vw;
   }
@@ -378,7 +378,7 @@ body * {
   @media (max-width: 1919px) {
     font-size: 3.39vw;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     font-size: 4.56vw;
   }
   @media (max-width: 767px) {
@@ -399,7 +399,7 @@ body * {
   @media (max-width: 1919px) {
     font-size: 0.94vw;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     font-size: 2.34vw;
   }
   @media (max-width: 767px) {
@@ -416,7 +416,7 @@ body * {
   @media (max-width: 1919px) {
     font-size: 0.78vw;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     font-size: 1.95vw;
   }
   @media (max-width: 767px) {
@@ -428,13 +428,13 @@ body * {
 }
 
 .class-desktop {
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     display: none !important;
   }
 }
 .class-mobile {
   display: none !important;
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     display: flex !important;
   }
 }
@@ -458,7 +458,7 @@ body * {
     @media (max-width: 1919px) {
       margin-left: 0.94vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-left: 1.95vw;
     }
     &:first-child {
@@ -471,7 +471,7 @@ body * {
         width: 1.35vw;
         height: 1.35vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         width: 2.99vw;
         height: 2.99vw;
       }
@@ -504,7 +504,7 @@ body * {
       height: 1.56vw;
       margin-left: 0.63vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-left: 1.95vw;
       width: 2.99vw;
       height: 2.99vw;
@@ -532,7 +532,7 @@ body * {
     width: 48.44vw;
     height: 44.79vw;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     width: 100%;
     height: 100%;
   }
@@ -542,7 +542,7 @@ body * {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .screens__swiper-wrapper {
     .screens__slide {
       &:not(.swiper-slide-active) {

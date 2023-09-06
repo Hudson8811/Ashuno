@@ -4,10 +4,10 @@
   @media (max-width: 1919px) {
     padding: 3.65vw 0 7.81vw 0;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     padding: 9.11vw 0 0;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     padding: 10.11vw 0 0;
   }
   &__container {
@@ -26,17 +26,17 @@
     z-index: 3;
   }
   &__body {
-	padding-left: 50px;
-	@media (max-width: 1920px){
-		padding-left: 2.60vw;
-	}
-	@media (max-width: 1024px){
-		  padding: 0;
-		  width: 46.88vw;
-	}
-	@media (max-width: 767px){
-		width: auto;
-	}
+    padding-left: 50px;
+    @media (max-width: 1920px) {
+      padding-left: 2.6vw;
+    }
+    @media (max-width: 1024px) {
+      padding: 0;
+      width: 46.88vw;
+    }
+    @media (max-width: 767px) {
+      width: auto;
+    }
   }
   &__text {
     transition: all 1.5s ease 0s;
@@ -46,7 +46,7 @@
       max-width: 14.32vw;
       margin-top: 2.86vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       max-width: 100%;
       margin-top: 2.61vw;
     }
@@ -84,7 +84,7 @@
       height: 2.6vw;
       font-size: 0.83vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-top: 3vw;
       border-radius: 13.02vw;
       width: 32.55vw;
@@ -118,7 +118,7 @@
     @media (max-width: 1919px) {
       margin-top: -1.82vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-top: 0;
       justify-content: flex-start;
       align-items: flex-end;
@@ -131,7 +131,7 @@
         width: 17.71vw;
         height: 18.49vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         width: 20.83vw;
         height: 22.14vw;
         transform: translate(-50%, 20%);
@@ -173,8 +173,8 @@
     backdrop-filter: blur(0.21vw);
     padding: 0.68vw 0.68vw 1vw 0.68vw;
   }
-  @media (max-width: 1023px) {
-	background-color: #ffffff;
+  @media (max-width: 1024px) {
+    background-color: #ffffff;
     position: static;
     opacity: 1;
     visibility: visible;
@@ -184,8 +184,8 @@
     margin: 5.21vw 12.24vw 0;
     border-radius: 1.04vw;
     padding: 2vw 3.91vw 3.91vw;
-	 box-shadow: none;
-	 border: none;
+    box-shadow: none;
+    border: none;
   }
   @media (max-width: 767px) {
     margin: 5.21vw 8.95vw 0;
@@ -205,7 +205,7 @@
       top: -0.31vw;
       right: -0.21vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       display: none;
     }
     img {
@@ -217,12 +217,12 @@
   }
   &__form {
     display: flex;
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
     }
   }
   &__left {
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-top: 3.26vw;
       display: flex;
       justify-content: space-between;
@@ -254,7 +254,7 @@
       border: 0.1vw solid var(--5, #7f89a7);
       box-shadow: 0 0.47vw 1.46vw 0 rgba(231, 58, 40, 0.15);
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       border-radius: 179.567px;
       background: #d61f24;
       color: #fff;
@@ -292,7 +292,7 @@
       width: 8.59vw;
       height: 1.82vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       background: url("../images/logo-black.svg") 0 0 / 100% 100% no-repeat;
       width: 13.67vw;
       height: 3.26vw;
@@ -310,7 +310,7 @@
     @media (max-width: 1919px) {
       margin-left: 2.86vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       order: -1;
       margin: 0;
     }
@@ -331,7 +331,7 @@
       padding: 0.63vw 1.46vw;
       font-size: 0.83vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       font-size: 1.95vw;
       padding: 1.95vw 3.91vw 0.78vw;
     }
@@ -356,7 +356,7 @@
       border-radius: 5.21vw;
       font-size: 0.73vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       padding: 2.17vw 3.91vw;
       font-size: 1.56vw;
       outline: 0.13vw solid #c8cee1;
@@ -372,7 +372,7 @@
       @media (max-width: 1919px) {
         outline: 0.05vw solid #d61f24;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         outline: 0.13vw solid #d61f24;
       }
     }

@@ -4,7 +4,7 @@
   @media (max-width: 1919px) {
     padding: 3.85vw 0 11.46vw 0;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     background-color: #26292d;
     padding: 9.11vw 0 14.32vw;
   }
@@ -13,7 +13,7 @@
     @media (max-width: 1919px) {
       max-width: 33.33vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       max-width: 60%;
     }
   }
@@ -26,13 +26,13 @@
       margin-top: 2.08vw;
       padding-left: 2.34vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       max-width: 48.18vw;
       padding: 0;
       margin-top: 2.91vw;
-	}
-	@media (max-width: 767px) {
-		 margin-top: 4.91vw;
+    }
+    @media (max-width: 767px) {
+      margin-top: 4.91vw;
       max-width: 63.68vw;
     }
   }
@@ -44,7 +44,7 @@
     @media (max-width: 1919px) {
       margin-top: 1.56vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-top: 6.25vw;
     }
   }
@@ -56,15 +56,15 @@
     @media (max-width: 1919px) {
       flex: 0 1 56.25vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       flex: 1 1 auto;
       flex-wrap: wrap;
-		row-gap: 3.2vw;
+      row-gap: 3.2vw;
     }
   }
   &__item {
     flex: 0 1 33.333%;
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       flex: 1 1 100%;
     }
   }
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     flex-direction: row;
   }
   @media (max-width: 767px) {
@@ -92,7 +92,7 @@
         width: 10.78vw;
         height: 10.89vw;
       }
-      @media (max-width: 1023px) {
+      @media (max-width: 1024px) {
         width: 25.04vw;
         height: 25.04vw;
       }
@@ -131,7 +131,7 @@
       width: 6.25vw;
       height: 6.25vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       width: 19.53vw;
       height: 19.53vw;
       transform: translate(-50%, 0);
@@ -157,7 +157,7 @@
   }
 
   &__body {
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       margin-left: 12.37vw;
     }
     @media (max-width: 767px) {
@@ -179,7 +179,7 @@
       margin-top: 2.08vw;
       font-size: 1.88vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       font-size: 4.56vw;
       margin-top: 0;
       text-align: left;
@@ -201,7 +201,7 @@
       margin-top: 0.63vw;
       font-size: 1.04vw;
     }
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       font-size: 1.95vw;
       margin-top: 1.95vw;
       text-align: left;
