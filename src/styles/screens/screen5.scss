@@ -175,7 +175,9 @@
   }
   @media (max-width: 1024px) {
     background-color: #ffffff;
-    position: static;
+    position: relative;
+	 top: 0;
+	 left: 0;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;

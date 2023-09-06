@@ -10,6 +10,12 @@
     overflow: hidden;
     padding: 7.17vw 0 31vw;
   }
+  .screen__bg {
+	@media (max-width: 1024px){
+		top: 50%;
+		width: 100%;
+	}
+  }
   &__header {
     width: 616.23px;
     max-width: 100%;

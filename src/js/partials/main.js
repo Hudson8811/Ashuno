@@ -145,7 +145,7 @@ var left_screen4_swiper = new Swiper(".left-screen4__swiper", {
 		prevEl: ".left-screen4__swiper-wrapper .swiper-arrow.swiper-arrow-prev",
 	},
 	breakpoints: {
-		1024: {
+		1025: {
 			direction: "vertical",
 			slidesPerView: '4',
 		}
@@ -162,7 +162,7 @@ var right_screen4_swiper = new Swiper(".right-screen4__swiper", {
 		prevEl: ".right-screen4__swiper-wrapper .swiper-arrow.swiper-arrow-prev",
 	},
 	breakpoints: {
-		1024: {
+		1025: {
 			direction: "vertical",
 			slidesPerView: '4',
 		}
