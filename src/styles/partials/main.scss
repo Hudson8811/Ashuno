@@ -138,6 +138,7 @@ body {
     }
 
     .screens-pagination {
+		width: auto;
       position: absolute;
       z-index: 99;
       left: 50%;
@@ -520,6 +521,7 @@ body * {
 }
 
 .screen__bg {
+	pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -527,7 +529,7 @@ body * {
   height: 860px;
   background: url("../images/screen1/pattern.png") 0 0 / 100% 100% no-repeat;
   z-index: 2;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(14deg);
   @media (max-width: 1919px) {
     width: 48.44vw;
     height: 44.79vw;

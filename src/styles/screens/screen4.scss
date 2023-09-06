@@ -12,12 +12,31 @@
   @media (max-width: 767px) {
     padding: 18.11vw 0 5vw;
   }
+	.swiper {
+		margin-left: -30px;
+		@media (max-width: 1920px){
+			margin-left: -1.56vw;
+		}
+		@media (max-width: 1024px){
+			margin: 0;
+		}
+	}
   .swiper-slide {
     position: relative;
+	 overflow: visible!important;
+	 &:first-child{
+		
+		 .card-screen4 {
+			&::before{
+				display: none;
+			}
+		}
+	 }
   }
   &__title {
   }
   &__row {
+    position: relative;
     margin-top: 60px;
     display: flex;
     justify-content: space-between;
@@ -28,9 +47,19 @@
     @media (max-width: 1024px) {
       flex-direction: column;
       margin-top: 6.51vw;
+		>* {
+		}
     }
     @media (max-width: 767px) {
       margin-top: 11.51vw;
+    }
+    .screen__bg {
+      z-index: 2;
+      @media (max-width: 1024px) {
+			top: 70%;
+			width: 100%;
+			height: 100%;
+      }
     }
   }
   &__left {
@@ -41,6 +70,7 @@
     @media (max-width: 1024px) {
       max-width: 100%;
       order: -1;
+		position: relative;
     }
   }
   &__subtitle {
@@ -71,6 +101,7 @@
   }
   &__center {
     position: relative;
+	 z-index: 3;
     width: 550px;
     max-width: 100%;
     opacity: 1;
@@ -197,22 +228,12 @@
     }
   }
   &__swiper {
-    max-height: 510px;
+    max-height: 480px;
     @media (max-width: 1919px) {
-      max-height: 26.56vw;
+      max-height: 25vw;
     }
   }
   &__slide {
-    padding: 14px 0;
-    @media (max-width: 1919px) {
-      padding: 0.73vw 0;
-    }
-    @media (max-width: 1024px) {
-      padding: 3.26vw 0;
-    }
-    @media (max-width: 767px) {
-      padding: 0;
-    }
   }
 }
 
@@ -291,25 +312,15 @@
     }
   }
   &__swiper {
-    max-height: 510px;
+    max-height: 480px;
     @media (max-width: 1919px) {
-      max-height: 26.56vw;
+      max-height: 25vw;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
     }
   }
   &__slide {
-    padding: 14px 0;
-    @media (max-width: 1919px) {
-      padding: 0.73vw 0;
-    }
-    @media (max-width: 1024px) {
-      padding: 3.26vw 0;
-    }
-    @media (max-width: 767px) {
-      padding: 0;
-    }
   }
   .swiper-arrow {
   }
@@ -320,18 +331,68 @@
 }
 
 .card-screen4 {
-  cursor: pointer;
-  display: flex;
-  @media (max-width: 1024px) {
-    align-items: center;
-    max-width: 54.69vw;
-    margin: 0 auto;
-  }
-  @media (max-width: 767px) {
-    align-items: center;
-    max-width: 95%;
-    margin: 0 auto;
-  }
+	cursor: pointer;
+	display: flex;
+	position: relative;
+    padding: 20px 0 20px 30px;
+    @media (max-width: 1919px) {
+		 padding: 1.04vw 0 1.04vw 1.56vw;
+	}
+	@media (max-width: 1024px) {
+		padding: 3.26vw 0;
+		align-items: center;
+		max-width: 54.69vw;
+		margin: 0 auto;
+	}
+	@media (max-width: 767px) {
+		padding: 0;
+		align-items: center;
+		max-width: 95%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 1025px){
+		&::before,&::after{
+			content:'';
+			position: absolute;
+			right: 0;
+			width: calc(100% - 170px);
+			height: 0.5px;
+			background-color: #D61F24;
+			@media (max-width: 1920px){
+				height: 0.025vw;
+				width: calc(100% - 8.85vw);
+			}
+		}
+		&::before{
+			top: 0;
+			transform: translate(0, -50%);
+		}
+		&::after{
+			bottom: 0;
+			transform: translate(0, 50%);
+		}
+	}
+	&__circle{
+		content:'';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 14px;
+		height: 14px;
+		transform: translate(0, -50%);
+		background-color: #D61F24;
+		border-radius: 50%;
+		opacity: 0;
+		@media (max-width: 1920px){
+			width: 0.73vw;
+			height: 0.73vw;
+			  
+		}
+		@media (max-width: 1024px){
+			display: none;
+		}
+	}
   &__image {
     flex: 0 0 auto;
     width: 120px;
@@ -441,6 +502,21 @@
   }
   @media (min-width: 1025px) {
     &.js-active {
+		&::before,&::after{
+			height: 1px;
+			width: calc(100% - 1.56vw)!important;
+			@media (min-width: 1920px){
+				height: 0.5vw;
+				width: calc(100% - 30px)!important;
+				  
+			}
+		}
+		.card-screen4__circle{
+			opacity: 1;
+		}
+		.card-screen4__line {
+			opacity: 0;
+		}
       .card-screen4__image {
         width: 0;
       }
@@ -470,5 +546,8 @@
         width: 100%;
       }
     }
+  }
+  @media (min-width: 1920px){
+	  
   }
 }

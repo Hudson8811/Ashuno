@@ -5,6 +5,7 @@
     padding: 4.48vw 0 11.46vw 0;
   }
   @media (max-width: 1024px) {
+    background: url("../images/screen3/bg-mob.png") 0 0 / 100% 100% no-repeat;
     padding: 9.11vw 0 6.32vw;
   }
   @media (max-width: 767px) {
@@ -182,33 +183,35 @@
     &-image {
       position: relative;
       transition: all 1s ease 0s;
+		max-height: 160px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 1920px){
+			max-height: 8.33vw;
+		}
       @media (max-width: 1024px) {
         min-height: 16.93vw;
-        min-width: 26.04vw;
+        width: 36.07vw;
+		  padding-right: 9.11vw;
         display: flex;
         justify-content: center;
         align-items: center;
       }
       @media (max-width: 767px) {
         min-height: 21.05vw;
-        min-width: 28.42vw;
+        width: 40.53vw;
+		  padding: 0;
       }
       img {
         max-width: 100%;
-        max-height: 170px;
+		  max-height: 100%;
         transition: all 0.3s ease 0s;
         @media (max-width: 1919px) {
-          max-height: 8.85vw;
         }
         @media (max-width: 1024px) {
-          height: 100%;
-          max-height: 19.53vw;
-          max-width: 15.63vw;
         }
         @media (max-width: 767px) {
-          height: 100%;
-          max-height: 21.05vw;
-          max-width: 23.42vw;
         }
       }
     }
@@ -230,13 +233,11 @@
     @media (max-width: 1024px) {
       margin-top: 0 !important;
       font-size: 1.82vw !important;
-      margin-left: 13.02vw;
     }
     @media (max-width: 767px) {
       font-size: 2.73vw !important;
-      flex: 1 1 auto;
+      flex: 0 0 28.95vw;
       text-align: center;
-      margin-left: -1.98vw;
     }
   }
   &:hover {

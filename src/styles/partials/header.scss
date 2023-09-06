@@ -279,8 +279,10 @@
       padding: 0;
       margin-top: 2.63vw;
     }
+	 &.class-bold {
+		font-weight: 800;
+	 }
     &.active {
-      font-weight: 500;
       color: #d61f24;
       position: relative;
       &::before {
