@@ -66,6 +66,11 @@ screens_swiper.on('slideChange', function () {
 		
 		$('body').addClass('js-dark');
 		$('body').removeClass('js-light');
+	} 
+	if (screens_swiper.activeIndex == 2) {
+		$('body').addClass('screen-active3');
+	} else {
+		$('body').removeClass('screen-active3');
 	}
 
 	if (screens_swiper.activeIndex == 4) {
@@ -147,7 +152,7 @@ var left_screen4_swiper = new Swiper(".left-screen4__swiper", {
 	breakpoints: {
 		1025: {
 			direction: "vertical",
-			slidesPerView: '4',
+			slidesPerView: '3',
 		}
 	}
 });
@@ -164,7 +169,7 @@ var right_screen4_swiper = new Swiper(".right-screen4__swiper", {
 	breakpoints: {
 		1025: {
 			direction: "vertical",
-			slidesPerView: '4',
+			slidesPerView: '3',
 		}
 	}
 });

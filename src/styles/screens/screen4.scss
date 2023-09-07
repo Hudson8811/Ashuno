@@ -1,8 +1,8 @@
 .screen4 {
-  padding: 67px 0 120px 0;
+  padding: 67px 0 220px 0;
   overflow: hidden;
   @media (max-width: 1919px) {
-    padding: 3.49vw 0 6.25vw 0;
+    padding: 3.49vw 0 11.46vw 0;
   }
   @media (max-width: 1024px) {
     background-color: #26292d;
@@ -228,9 +228,12 @@
     }
   }
   &__swiper {
-    max-height: 480px;
+    max-height: 360px;
     @media (max-width: 1919px) {
-      max-height: 25vw;
+      max-height: 18.75vw;
+    }
+    @media (max-width: 1024px) {
+      max-height: 100%;
     }
   }
   &__slide {
@@ -312,9 +315,9 @@
     }
   }
   &__swiper {
-    max-height: 480px;
+    max-height: 360px;
     @media (max-width: 1919px) {
-      max-height: 25vw;
+      max-height: 18.75vw;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
@@ -503,10 +506,10 @@
   @media (min-width: 1025px) {
     &.js-active {
 		&::before,&::after{
-			height: 1px;
+			height: 0.05vw;
 			width: calc(100% - 1.56vw)!important;
 			@media (min-width: 1920px){
-				height: 0.5vw;
+				height: 1px;
 				width: calc(100% - 30px)!important;
 				  
 			}
