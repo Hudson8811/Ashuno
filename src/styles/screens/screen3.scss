@@ -7,8 +7,9 @@
   @media (max-width: 1024px) {
     background: url("../images/screen3/bg-mob.png") 0 0 / 100% 100% no-repeat;
     padding: 9.11vw 0 6.32vw;
-  }
-  @media (max-width: 767px) {
+	}
+	@media (max-width: 767px) {
+	  background: url("../images/screen3/bg-mob2.png") 0 0 / 100% 100% no-repeat;
     padding: 13.11vw 0 12.32vw;
   }
   &__row {
