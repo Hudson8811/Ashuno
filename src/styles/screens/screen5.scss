@@ -17,6 +17,9 @@
 		left: 60%;
 		transform: translate(-50%,-50%) rotate(20deg);
 	}
+	@media (max-width: 767px){
+		width: 105%;
+	}
   }
   &__container {
     position: relative;
