@@ -1,8 +1,8 @@
 .screen4 {
-  padding: 67px 0 220px 0;
+  padding: 40px 0 180px 0;
   overflow: hidden;
   @media (max-width: 1919px) {
-    padding: 3.49vw 0 11.46vw 0;
+    padding: 2.08vw 0 9.38vw 0;
   }
   @media (max-width: 1024px) {
     background-color: #26292d;
@@ -37,12 +37,12 @@
   }
   &__row {
     position: relative;
-    margin-top: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     max-width: 100%;
     @media (max-width: 1919px) {
-      margin-top: 3.13vw;
+      margin-top: 1.56vw;
     }
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -141,11 +141,14 @@
       img {
         position: relative;
         z-index: 2;
-        width: 331px;
+        width: 300px;
+		  max-height: 400px;
         @media (max-width: 1919px) {
-          width: 17.24vw;
-        }
-        @media (max-width: 1024px) {
+          width: 15.63vw;
+			 max-height: 20.83vw;
+			}
+			@media (max-width: 1024px) {
+			  max-height: 100%;
           width: 100%;
         }
       }
@@ -214,9 +217,9 @@
 
 .left-screen4 {
   &__swiper-wrapper {
-    margin-top: 40px;
+    margin-top: 20px;
     @media (max-width: 1919px) {
-      margin-top: 2.08vw;
+      margin-top: 1.04vw;
     }
     @media (max-width: 1024px) {
       display: flex;
@@ -228,9 +231,9 @@
     }
   }
   &__swiper {
-    max-height: 360px;
+    max-height: 300px;
     @media (max-width: 1919px) {
-      max-height: 18.75vw;
+      max-height: 15.63vw;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
@@ -252,14 +255,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 475px;
-    height: 475px;
+    width: 400px;
+    height: 400px;
     transform: translate(-50%, -50%);
     background-color: #d61f24;
     border-radius: 50%;
     @media (max-width: 1919px) {
-      width: 24.74vw;
-      height: 24.74vw;
+      width: 20.83vw;
+      height: 20.83vw;
     }
     @media (max-width: 1024px) {
       width: 39.06vw;
@@ -301,9 +304,9 @@
 
 .right-screen4 {
   &__swiper-wrapper {
-    margin-top: 40px;
+    margin-top: 20px;
     @media (max-width: 1919px) {
-      margin-top: 2.08vw;
+      margin-top: 1.04vw;
     }
     @media (max-width: 1024px) {
       display: flex;
@@ -315,9 +318,9 @@
     }
   }
   &__swiper {
-    max-height: 360px;
+    max-height: 300px;
     @media (max-width: 1919px) {
-      max-height: 18.75vw;
+      max-height: 15.63vw;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
@@ -337,9 +340,9 @@
 	cursor: pointer;
 	display: flex;
 	position: relative;
-    padding: 20px 0 20px 30px;
+    padding: 10px 0 10px 30px;
     @media (max-width: 1919px) {
-		 padding: 1.04vw 0 1.04vw 1.56vw;
+		 padding: 0.52vw 0 0.52vw 1.56vw;
 	}
 	@media (max-width: 1024px) {
 		padding: 3.26vw 0;

@@ -1,8 +1,8 @@
 .screen3 {
 
-  padding: 86px 0 232px 0;
+  padding: 86px 0 180px 0;
   @media (max-width: 1919px) {
-    padding: 4.48vw 0 12.08vw 0;
+    padding: 4.48vw 0 9.38vw 0;
   }
   @media (max-width: 1024px) {
     background: url("../images/screen3/bg-mob.png") 0 0 / 100% 100% no-repeat;
@@ -40,10 +40,10 @@
   &__swiper {
     width: 1000px;
     max-width: 100%;
-    padding-top: 170px;
+    padding-top: 50px;
     @media (max-width: 1919px) {
       width: 52.08vw;
-      padding-top: 8.85vw;
+      padding-top: 2.60vw;
     }
     @media (max-width: 1024px) {
       width: 100%;
@@ -56,9 +56,9 @@
       display: flex;
       justify-content: center;
       position: relative;
-      margin-bottom: 50px;
+      margin-bottom: 0;
       @media (max-width: 1920px) {
-        margin-bottom: 2.6vw;
+        margin-bottom: 0;
       }
       @media (max-width: 1024px) {
         margin-bottom: 0;
@@ -83,12 +83,12 @@
   }
   .swiper-arrow {
     position: absolute;
-    top: 220px;
+    top: 130px;
     width: 40px;
     height: 70px;
     cursor: pointer;
     @media (max-width: 1919px) {
-      top: 11.46vw;
+      top: 6.77vw;
       width: 2.08vw;
       height: 3.65vw;
     }
@@ -243,11 +243,14 @@
   }
   &:hover {
     .item-screen3__icon-circle {
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(0.8);
+		@media (max-width: 1024px){
+			transform: translate(-75%, -50%) scale(1);
+		}
     }
     .item-screen3__icon-image {
       img {
-        transform: scale(1.2);
+        transform: scale(1.1);
         @media (max-width: 1024px) {
           transform: scale(1);
         }
@@ -256,11 +259,11 @@
     .item-screen3__title {
       font-weight: 700;
       margin-top: 70px;
-      font-size: 28px;
+      font-size: 24px;
       color: #d61f24;
       @media (max-width: 1919px) {
         margin-top: 3.65vw;
-        font-size: 1.46vw;
+        font-size: 1.25vw;
       }
     }
   }
