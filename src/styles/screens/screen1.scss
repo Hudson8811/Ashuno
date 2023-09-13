@@ -395,6 +395,9 @@
 		 margin-top: 10vw;
 		  
 	 }
+	 &-anim {
+		min-height: 100%;
+	 }
   }
   &__circle {
     position: absolute;
@@ -406,7 +409,7 @@
     background: #d61f24;
     transition: all 1s ease 0s;
     clip-path: circle(0% at 50% 50%);
-    animation: screen1-circle-shown 1.5s ease 2.3s forwards;
+    animation: screen1-circle-shown 1.5s ease 2.5s forwards;
     @media (max-width: 1919px) {
       width: 24.01vw;
       height: 24.01vw;
@@ -585,29 +588,29 @@
         border-radius: 9px;
         margin-top: 5px;
         width: 100px;
-        height: 107px;
+          height: 0;
         transition: all 1s ease 0s;
 
         @media (max-width: 1919px) {
           border-radius: 0.47vw;
           margin-top: 0.26vw;
           width: 5.21vw;
-          height: 5.57vw;
+            height: 0;
         }
         @media (max-width: 1024px) {
           border-radius: 0.65vw;
           margin-top: 0.65vw;
           width: 9.38vw;
-          height: 9.9vw;
+            height: 9.9vw;
         }
 
         &.shown {
-          height: 0;
+			height: 107px;
           @media (max-width: 1919px) {
-            height: 0;
+					height: 5.57vw;
           }
           @media (max-width: 1024px) {
-            height: 0;
+					height: 9.9vw;
           }
         }
       }

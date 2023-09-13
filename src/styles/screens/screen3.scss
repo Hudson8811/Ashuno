@@ -177,6 +177,7 @@
         height: 19.53vw;
       }
       @media (max-width: 767px) {
+			left: 67%;
         width: 27.63vw;
         height: 27.63vw;
       }
@@ -218,7 +219,7 @@
     }
   }
   &__title {
-    margin-top: 40px;
+    margin-top: 20px;
     color: var(--3, #474a53);
     font-size: 20px;
     font-style: normal;
@@ -228,7 +229,7 @@
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
     @media (max-width: 1919px) {
-      margin-top: 2.08vw;
+      margin-top: 1.04vw;
       font-size: 1.04vw;
     }
     @media (max-width: 1024px) {
@@ -258,11 +259,11 @@
     }
     .item-screen3__title {
       font-weight: 700;
-      margin-top: 70px;
+      margin-top: 50px;
       font-size: 24px;
       color: #d61f24;
       @media (max-width: 1919px) {
-        margin-top: 3.65vw;
+        margin-top: 2.60vw;
         font-size: 1.25vw;
       }
     }

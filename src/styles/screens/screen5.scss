@@ -1,8 +1,8 @@
 .screen5 {
-  padding: 40px 0 60px 0;
+  padding: 25px 0 60px 0;
   position: relative;
   @media (max-width: 1919px) {
-    padding: 2.08vw 0 3.13vw 0;
+    padding: 1.30vw 0 3.13vw 0;
   }
   @media (max-width: 1024px) {
     padding: 9.11vw 0 0;
@@ -149,11 +149,14 @@
       transition: all 1s ease 0s;
       width: 250px;
       height: 250px;
+		margin-top: -30px;
       @media (max-width: 1919px) {
+			margin-top: -1.56vw;
         width: 13.02vw;
         height: 13.02vw;
       }
       @media (max-width: 1024px) {
+			margin: 0!important;
         width: 20.83vw;
         height: 22.14vw;
         transform: translate(-50%, 20%);
@@ -174,7 +177,7 @@
   transition: all 0.3s ease 0s;
   width: 698.01px;
   position: absolute;
-  z-index: 9;
+  z-index: 99;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -241,6 +244,9 @@
     }
   }
   &__container {
+	@media (max-width: 1024px){
+		flex: 1 1 auto;
+	}
   }
   &__form {
     display: flex;

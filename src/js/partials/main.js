@@ -1,3 +1,4 @@
+AOS.init();
 $('.scrollto').on('click', function() {
 
 	let href = $(this).attr('href');
@@ -116,7 +117,16 @@ screens_swiper.on('slideChange', function () {
 	$('.swiper-pagination-bullet.swiper-pagination-bullet-active').next().next().next().addClass('js-next3');
 	$('.swiper-pagination-bullet.swiper-pagination-bullet-active').next().next().next().next().addClass('js-next4');
 
+
+
+
+
+
+
+
 });
+
+
 
 
 
@@ -138,9 +148,48 @@ var screen3_swiper = new Swiper(".screen3__swiper", {
 	navigation: {
 		nextEl: ".screen3__swiper-arrow-next",
 		prevEl: ".screen3__swiper-arrow-prev",
-	}
+	},
+	allowTouchMove: false,
 });
 
+
+$('.arrow-swiper-next-big').slideUp(0);
+$('.arrow-swiper-prev-small').slideUp(0);
+screen3_swiper.on('reachBeginning', function () {
+	$('.arrow-swiper-prev-small').slideUp(0);
+	$('.arrow-swiper-prev-big').slideDown(0);
+});
+screen3_swiper.on('reachEnd', function () {
+	$('.arrow-swiper-next-small').slideUp(0);
+	$('.arrow-swiper-next-big').slideDown(0);
+});
+$('.arrow-swiper-prev-small').on('click', function () {
+	$('.arrow-swiper-next-big').slideUp(0);
+	$('.arrow-swiper-next-small').slideDown(0);
+});
+$('.arrow-swiper-next-small').on('click', function () {
+	$('.arrow-swiper-prev-big').slideUp(0);
+	$('.arrow-swiper-prev-small').slideDown(0);
+});
+$('.arrow-swiper-prev-big').on('click', function () {
+	screens_swiper.slideTo(1);
+});
+$('.arrow-swiper-next-big').on('click', function () {
+	screens_swiper.slideTo(3);
+});
+
+
+	if ($(".screen3__swiper-arrow-prev").hasClass("screen3__swiper-big-prev")) {
+		$(".screen3__swiper-arrow-prev").on('click', function () {
+			screens_swiper.slideTo(1);
+		});
+	}
+
+	if ($(".screen3__swiper-arrow-next").hasClass("screen3__swiper-big-next")) {
+		$(".screen3__swiper-big-next").on('click', function () {
+			screens_swiper.slideTo(3);
+		});
+	}
 
 
 
@@ -183,7 +232,7 @@ var right_screen4_swiper = new Swiper(".right-screen4__swiper", {
 $(document).ready(function () {
 
 
-	$(".body-screen1__image-name").click(function () {
+	$(".body-screen1__image-name").hover(function () {
 		$(this).next().toggleClass('shown');
 	});
 
@@ -290,9 +339,13 @@ $(document).ready(function () {
 
 
 	if ($(window).width() > 1024) {
-		$(".card-screen4").click(function () {
-			$('.card-screen4').removeClass('js-active');
+		$(".right-screen4__swiper .card-screen4").click(function () {
+			$('.right-screen4__swiper .card-screen4').removeClass('js-active');
+			$('.right-screen4__swiper .card-screen4').removeClass('hidden-before');
+			$('.right-screen4__swiper .card-screen4').removeClass('hidden-after');
 			$(this).addClass('js-active');
+			$(this).parent().prev().children('.card-screen4').addClass('hidden-after');
+			$(this).parent().next().children('.card-screen4').addClass('hidden-before');
 			$('.screen4__center').addClass('js-active');
 			var cardImage = $(this).children('.card-screen4__image').html();
 			$('.screen4__center-inner').html(cardImage);/* 
@@ -303,20 +356,38 @@ $(document).ready(function () {
 		});
 
 
-		$('.popup-screen5__input').keyup(function() {
-			var empty = false;
-			$('.popup-screen5__input').each(function() {
-				if ($(this).val() === '') {
-					empty = true;
+			$('.popup-screen5.class-desktop .popup-screen5__input').keyup(function() {
+				var empty = true;
+				$('.popup-screen5.class-desktop .popup-screen5__input').each(function() {
+					if ($(this).val() === '') {
+						empty = false;
+						return false
+					}
+				});
+
+				if (empty) {
+					$('.popup-screen5.class-desktop .popup-screen5__btn').addClass('full').text('Отправить');
+				} else {
+					$('.popup-screen5.class-desktop .popup-screen5__btn').removeClass('full').text('Данные не заполнены');
 				}
 			});
 
-			if (empty) {
-				$('.popup-screen5__btn').removeClass('full').text('Данные не заполнены');
-			} else {
-				$('.popup-screen5__btn').addClass('full').text('Отправить');
-			}
-		});
+
+
+
+			/* $('.popup-screen5__input').on('input', function() {
+				var screen5__input1 = $('#popup-screen5__input1').val();
+				var screen5__input2 = $('#popup-screen5__input2').val();
+				var screen5__input3 = $('#popup-screen5__input3').val();
+
+				if (screen5__input1 !== '' && screen5__input2 !== '' && screen5__input3 !== '') {
+					$('.popup-screen5__btn').addClass('full').text('Отправить');
+				} else {
+					$('.popup-screen5__btn').removeClass('full').text('Данные не заполнены');
+				}
+			}); */
+
+
 	}
 
 	

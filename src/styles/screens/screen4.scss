@@ -1,8 +1,8 @@
 .screen4 {
-  padding: 40px 0 180px 0;
+  padding: 40px 0 160px 0;
   overflow: hidden;
   @media (max-width: 1919px) {
-    padding: 2.08vw 0 9.38vw 0;
+    padding: 2.08vw 0 8.33vw 0;
   }
   @media (max-width: 1024px) {
     background-color: #26292d;
@@ -37,12 +37,12 @@
   }
   &__row {
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     max-width: 100%;
     @media (max-width: 1919px) {
-      margin-top: 1.56vw;
+      margin-top: 1.04vw;
     }
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -130,10 +130,15 @@
       align-items: center;
       opacity: 1;
       transition: all 0.3s ease 0s;
+		min-height: 400px;
+		@media (max-width: 1920px){
+			min-height: 20.83vw;
+		}
       @media (max-width: 1024px) {
         opacity: 1;
         position: relative;
         width: 26.04vw;
+		  min-height: 0;
       }
       @media (max-width: 767px) {
         width: 32.89vw;
@@ -141,15 +146,15 @@
       img {
         position: relative;
         z-index: 2;
-        width: 300px;
+        max-width: 300px;
 		  max-height: 400px;
         @media (max-width: 1919px) {
-          width: 15.63vw;
+          max-width: 15.63vw;
 			 max-height: 20.83vw;
 			}
 			@media (max-width: 1024px) {
 			  max-height: 100%;
-          width: 100%;
+          max-width: 100%;
         }
       }
       &.js-active {
@@ -232,11 +237,14 @@
   }
   &__swiper {
     max-height: 300px;
+	 margin: 7px 0;
     @media (max-width: 1919px) {
       max-height: 15.63vw;
+		margin: 0.36vw 0;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
+		margin: 0;
     }
   }
   &__slide {
@@ -319,11 +327,14 @@
   }
   &__swiper {
     max-height: 300px;
+	 margin: 7px 0;
     @media (max-width: 1919px) {
       max-height: 15.63vw;
+		margin: 0.36vw 0;
     }
     @media (max-width: 1024px) {
       max-height: 100%;
+		margin: 0;
     }
   }
   &__slide {
@@ -363,10 +374,10 @@
 			position: absolute;
 			right: 0;
 			width: calc(100% - 170px);
-			height: 0.5px;
-			background-color: #D61F24;
+			height: 1.5px;
+			background: linear-gradient(-270deg, #D61F24 50%, rgba(231, 58, 40, 0.00) 100%);
 			@media (max-width: 1920px){
-				height: 0.025vw;
+				height: 0.075vw;
 				width: calc(100% - 8.85vw);
 			}
 		}
@@ -471,7 +482,7 @@
     position: absolute;
     width: 165px;
     height: 2px;
-    background: linear-gradient(50deg, #d61f24 0%, rgba(231, 58, 40, 0) 100%);
+	 background: linear-gradient(270deg, #D61F24 50%, rgba(231, 58, 40, 0.00) 100%);
     @media (max-width: 1919px) {
       width: 8.59vw;
       height: 0.1vw;
@@ -507,6 +518,16 @@
     }
   }
   @media (min-width: 1025px) {
+	&.hidden-before {
+		&::before{
+			display: none;
+		}
+	}
+	&.hidden-after {
+		&::after{
+			display: none;
+		}
+	}
     &.js-active {
 		&::before,&::after{
 			height: 0.05vw;
