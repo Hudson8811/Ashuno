@@ -215,8 +215,6 @@ $(document).on("mousewheel", function (event) {
 	} else {
 		screens_swiper.mousewheel.enable();
 	}
-	console.log(screen3_swiper.activeIndex);
-	console.log(screen3_swiper.slides.length - 4);
 });
 
 
