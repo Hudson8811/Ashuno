@@ -149,9 +149,8 @@ var screen3_swiper = new Swiper(".screen3__swiper", {
 		nextEl: ".screen3__swiper-arrow-next",
 		prevEl: ".screen3__swiper-arrow-prev",
 	},
-	allowTouchMove: false,
+	/* mousewheel: true, */
 });
-
 
 $('.arrow-swiper-next-big').slideUp(0);
 $('.arrow-swiper-prev-small').slideUp(0);
@@ -162,6 +161,7 @@ screen3_swiper.on('reachBeginning', function () {
 screen3_swiper.on('reachEnd', function () {
 	$('.arrow-swiper-next-small').slideUp(0);
 	$('.arrow-swiper-next-big').slideDown(0);
+	$('.screen3 .screen3__swiper-outerwrapper').addClass('js-active');
 });
 $('.arrow-swiper-prev-small').on('click', function () {
 	$('.arrow-swiper-next-big').slideUp(0);
@@ -179,17 +179,46 @@ $('.arrow-swiper-next-big').on('click', function () {
 });
 
 
-	if ($(".screen3__swiper-arrow-prev").hasClass("screen3__swiper-big-prev")) {
-		$(".screen3__swiper-arrow-prev").on('click', function () {
-			screens_swiper.slideTo(1);
-		});
-	}
+if ($(".screen3__swiper-arrow-prev").hasClass("screen3__swiper-big-prev")) {
+	$(".screen3__swiper-arrow-prev").on('click', function () {
+		screens_swiper.slideTo(1);
+	});
+}
 
-	if ($(".screen3__swiper-arrow-next").hasClass("screen3__swiper-big-next")) {
-		$(".screen3__swiper-big-next").on('click', function () {
-			screens_swiper.slideTo(3);
-		});
+if ($(".screen3__swiper-arrow-next").hasClass("screen3__swiper-big-next")) {
+	$(".screen3__swiper-big-next").on('click', function () {
+		screens_swiper.slideTo(3);
+	});
+}
+
+
+$(document).on("mousewheel", function (event) {
+	if (screens_swiper.activeIndex == 2) {
+		screens_swiper.mousewheel.disable();
+		if (event.originalEvent.wheelDelta >= 0) {
+			screen3_swiper.slidePrev();
+			$('.arrow-swiper-next-big').slideUp(0);
+			$('.arrow-swiper-next-small').slideDown(0);
+			if (screen3_swiper.activeIndex == 0) {
+				console.log('это первый слайд');
+				screens_swiper.mousewheel.enable();
+			}
+		} else {
+			screen3_swiper.slideNext();
+			$('.arrow-swiper-prev-big').slideUp(0);
+			$('.arrow-swiper-prev-small').slideDown(0);
+			if (screen3_swiper.activeIndex == screen3_swiper.slides.length - 4) {
+				console.log('это последний слайд');
+				screens_swiper.mousewheel.enable();
+			}
+		}
+	} else {
+		screens_swiper.mousewheel.enable();
 	}
+	console.log(screen3_swiper.activeIndex);
+	console.log(screen3_swiper.slides.length - 4);
+});
+
 
 
 
