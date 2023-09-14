@@ -74,6 +74,20 @@ screens_swiper.on('slideChange', function () {
 	} else {
 		$('body').removeClass('screen-active3');
 	}
+	
+	
+	var slideToLastOne = screen3_swiper.slides.length - 5;
+	if (screens_swiper.activeIndex == 3) {
+		setTimeout(function () {
+			screen3_swiper.slideTo(slideToLastOne);
+		}, 700);
+	} 
+	if (screens_swiper.activeIndex == 1) {
+		setTimeout(function () {
+			screen3_swiper.slideTo(1);
+		}, 700);
+	} 
+
 
 	if (screens_swiper.activeIndex == 4) {
 		$('.screens-arrow-inner.prev-screen-arrow-inner').show().addClass('js-active');
@@ -121,7 +135,15 @@ screens_swiper.on('slideChange', function () {
 
 
 
-
+	$(document).on('mousewheel', function (event) {
+		if (screen3_swiper.isBeginning) {
+			if (event.originalEvent.wheelDelta >= 0) {
+				if (screens_swiper.activeIndex == 2) {
+					screens_swiper.slideTo(1);
+				} 
+			}
+		}
+	});
 
 
 });
@@ -149,8 +171,16 @@ var screen3_swiper = new Swiper(".screen3__swiper", {
 		nextEl: ".screen3__swiper-arrow-next",
 		prevEl: ".screen3__swiper-arrow-prev",
 	},
-	/* mousewheel: true, */
+	mousewheel: true,
+	nested: true,
 });
+screen3_swiper.slideTo(1);
+
+
+
+
+
+
 
 $('.arrow-swiper-next-big').slideUp(0);
 $('.arrow-swiper-prev-small').slideUp(0);
@@ -192,32 +222,47 @@ if ($(".screen3__swiper-arrow-next").hasClass("screen3__swiper-big-next")) {
 }
 
 
+
+
 $(document).on("mousewheel", function (event) {
 	if (screens_swiper.activeIndex == 2) {
 		screens_swiper.mousewheel.disable();
-		if (event.originalEvent.wheelDelta >= 0) {
-			screen3_swiper.slidePrev();
-			$('.arrow-swiper-next-big').slideUp(0);
-			$('.arrow-swiper-next-small').slideDown(0);
-			if (screen3_swiper.activeIndex == 0) {
-				console.log('это первый слайд');
-				screens_swiper.mousewheel.enable();
-			}
-		} else {
-			screen3_swiper.slideNext();
-			$('.arrow-swiper-prev-big').slideUp(0);
-			$('.arrow-swiper-prev-small').slideDown(0);
-			if (screen3_swiper.activeIndex == screen3_swiper.slides.length - 4) {
-				console.log('это последний слайд');
-				screens_swiper.mousewheel.enable();
-			}
-		}
 	} else {
 		screens_swiper.mousewheel.enable();
 	}
 });
 
 
+
+$('.screen3__swiper-outerwrapper').mouseenter(function(){
+	screens_swiper.mousewheel.disable();
+});
+$('.screen3__swiper-outerwrapper').mouseleave(function(){
+	screens_swiper.mousewheel.enable();
+});
+
+screen3_swiper.on('reachBeginning', function () {
+	$(document).on('mousewheel', function (event) {
+		if (screen3_swiper.isBeginning) {
+			if (event.originalEvent.wheelDelta >= 0) {
+				if (screens_swiper.activeIndex == 2) {
+					screens_swiper.slideTo(1);
+				} 
+			}
+		}
+	});
+});
+screen3_swiper.on('reachEnd', function () {
+	$(document).on('mousewheel', function (event) {
+		if (screen3_swiper.isEnd) {
+			if (event.originalEvent.wheelDelta <= 0) {
+				if (screens_swiper.activeIndex == 2) {
+					screens_swiper.slideTo(3);
+				} 
+			}
+		}
+	});
+});
 
 
 
@@ -398,21 +443,6 @@ $(document).ready(function () {
 					$('.popup-screen5.class-desktop .popup-screen5__btn').removeClass('full').text('Данные не заполнены');
 				}
 			});
-
-
-
-
-			/* $('.popup-screen5__input').on('input', function() {
-				var screen5__input1 = $('#popup-screen5__input1').val();
-				var screen5__input2 = $('#popup-screen5__input2').val();
-				var screen5__input3 = $('#popup-screen5__input3').val();
-
-				if (screen5__input1 !== '' && screen5__input2 !== '' && screen5__input3 !== '') {
-					$('.popup-screen5__btn').addClass('full').text('Отправить');
-				} else {
-					$('.popup-screen5__btn').removeClass('full').text('Данные не заполнены');
-				}
-			}); */
 
 
 	}
