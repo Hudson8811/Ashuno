@@ -408,7 +408,7 @@ $(document).ready(function () {
 		var cardImage = $('.card-screen4__image-mobile').html();
 		$('.screen4__center-inner').html(cardImage);
 
-		$(".card-screen4").click(function () {
+		$(".right-screen4__swiper .card-screen4").click(function () {
 			var cardImage = $(this).children('.card-screen4__image').html();
 			$('.screen4__center-inner').html(cardImage);
 		});
