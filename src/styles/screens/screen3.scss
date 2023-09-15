@@ -273,4 +273,30 @@
       }
     }
   }
+  &:active {
+    .item-screen3__icon-circle {
+      transform: translate(-50%, -50%) scale(0.8);
+		@media (max-width: 1024px){
+			transform: translate(-75%, -50%) scale(1);
+		}
+    }
+    .item-screen3__icon-image {
+      img {
+        transform: scale(1.1);
+        @media (max-width: 1024px) {
+          transform: scale(1);
+        }
+      }
+    }
+    .item-screen3__title {
+      font-weight: 700;
+      margin-top: 50px;
+      font-size: 24px;
+      color: #d61f24;
+      @media (max-width: 1919px) {
+        margin-top: 2.60vw;
+        font-size: 1.25vw;
+      }
+    }
+  }
 }

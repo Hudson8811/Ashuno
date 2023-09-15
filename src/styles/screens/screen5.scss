@@ -134,6 +134,16 @@
 			  
 		  }
     }
+    &:active {
+      box-shadow: 0px 9px 29px 0px rgba(231, 58, 40, 1);
+      @media (max-width: 1919px) {
+        box-shadow: 0px 0.47vw 1.51vw 0px rgba(231, 58, 40, 1);
+      }
+			@media (max-width: 1024px){
+			  box-shadow: 0px 0 0 0px rgba(0, 0, 0, 0);
+			  
+		  }
+    }
   }
   &__img {
     margin-top: 0px;
@@ -316,6 +326,16 @@
       pointer-events: auto;
       border: none;
       &:hover {
+        box-shadow: 0px 4px 5px 0px #d61f24;
+        @media (max-width: 1919px) {
+          box-shadow: 0 0.22vw 0.5vw 0 #d61f24;
+        }
+			@media (max-width: 1024px){
+			  box-shadow: 0px 0 0 0px rgba(0, 0, 0, 0);
+			  
+		  }
+      }
+      &:active {
         box-shadow: 0px 4px 5px 0px #d61f24;
         @media (max-width: 1919px) {
           box-shadow: 0 0.22vw 0.5vw 0 #d61f24;

@@ -445,6 +445,30 @@ body * {
         }
       }
     }
+    &:active {
+		&:nth-child(2){
+			svg {
+				path {
+					&:nth-child(2){
+						fill: #d61f24;
+					}
+					&:nth-child(3){
+						fill: #d61f24;
+					}
+				}
+			}
+		}
+      svg {
+        path {
+          &:first-child {
+            fill: #d61f24 !important;
+          }
+          &:last-child {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
   }
 }
 .socials-colored {
