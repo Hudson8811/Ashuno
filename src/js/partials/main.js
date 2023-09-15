@@ -65,6 +65,17 @@ $(document).ready(function (){
     bulletClassChange();
 
 
+    let disableScroll = true;
+    setTimeout(function (){
+        disableScroll = false;
+    },4000);
+
+    screens_swiper.on('slideChangeTransitionStart', function () {
+        disableScroll = true;
+    });
+    screens_swiper.on('slideChangeTransitionEnd', function () {
+        disableScroll = false;
+    });
     screens_swiper.on('slideChange', function () {
         if (screens_swiper.activeIndex === 0 || screens_swiper.activeIndex === 2 || screens_swiper.activeIndex === 4) {
             $('body').removeClass('js-dark').addClass('js-light');
@@ -96,7 +107,7 @@ $(document).ready(function (){
             }, 0);
         }
 
-        bulletClassChange()
+        bulletClassChange();
     });
 
 
@@ -105,7 +116,7 @@ $(document).ready(function (){
 
     $(document).on('mousewheel wheel', function(event) {
         if ($(window).width() > 1024 && screens_swiper instanceof Swiper) {
-            if(scrollCount === 0){
+            if(scrollCount === 0 && !disableScroll){
                 scrollCount++;
 
                 let activeSection = screens_swiper.activeIndex;
