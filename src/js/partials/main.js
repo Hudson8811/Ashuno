@@ -242,10 +242,14 @@ $('.screen3__swiper-outerwrapper').mouseleave(function(){
 });
 
 screen3_swiper.on('reachBeginning', function () {
+	console.log('только докрутили начало');
 	$(document).on('mousewheel', function (event) {
 		if (screen3_swiper.isBeginning) {
+			console.log('начало');
 			if (event.originalEvent.wheelDelta >= 0) {
+				console.log('скроллим вверх');
 				if (screens_swiper.activeIndex == 2) {
+					console.log('переключаем на предыдущий');
 					screens_swiper.slideTo(1);
 				} 
 			}
@@ -253,10 +257,14 @@ screen3_swiper.on('reachBeginning', function () {
 	});
 });
 screen3_swiper.on('reachEnd', function () {
+	console.log('только докрутили конец');
 	$(document).on('mousewheel', function (event) {
 		if (screen3_swiper.isEnd) {
+			console.log('конец');
 			if (event.originalEvent.wheelDelta <= 0) {
+				console.log('крутим вниз');
 				if (screens_swiper.activeIndex == 2) {
+					console.log('переключаем на следующий');
 					screens_swiper.slideTo(3);
 				} 
 			}
