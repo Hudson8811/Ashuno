@@ -344,6 +344,16 @@
 			  
 		  }
       }
+      &:active {
+        box-shadow: 0px 9px 29px 0px rgba(231, 58, 40, 1);
+        @media (max-width: 1919px) {
+          box-shadow: 0px 0.47vw 1.51vw 0px rgba(231, 58, 40, 1);
+			}
+			@media (max-width: 1024px){
+			  box-shadow: 0px 0 0 0px rgba(0, 0, 0, 0);
+			  
+		  }
+      }
     }
     &--border {
       padding: 16px 30px;
@@ -375,6 +385,16 @@
         font-size: 2.63vw;
       }
       &:hover {
+        box-shadow: 0px 9px 29px 0px rgba(231, 58, 40, 1);
+        @media (max-width: 1919px) {
+          box-shadow: 0px 0.47vw 1.51vw 0px rgba(231, 58, 40, 1);
+        }
+			@media (max-width: 1024px){
+			  box-shadow: 0px 0 0 0px rgba(0, 0, 0, 0);
+			  
+		  }
+      }
+      &:active {
         box-shadow: 0px 9px 29px 0px rgba(231, 58, 40, 1);
         @media (max-width: 1919px) {
           box-shadow: 0px 0.47vw 1.51vw 0px rgba(231, 58, 40, 1);
