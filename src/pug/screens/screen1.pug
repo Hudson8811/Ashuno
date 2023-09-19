@@ -57,7 +57,11 @@
 				.body-screen1__circle-anim 
 				.body-screen1__right-anim(data-aos="fade" data-aos-duration="1000" data-aos-delay="2700") 
 					.body-screen1__image.body-screen1__image--car 
-						img(src="images/screen1/car.webp", alt="alt")
+						picture
+							source(srcset="images/screen1/car-mob.webp" media="(max-width: 767px)")
+							source(srcset="images/screen1/car-mobx2.webp 2x" media="(max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi)")
+							source(srcset="images/screen1/car.webp" media="(min-width: 768px)")
+							img(src="images/screen1/car-mob.webp", alt="alt")
 					.body-screen1__image.body-screen1__image--small.body-screen1__image--bearing 
 						.body-screen1__image-name Подшипник
 							.body-screen1__image-name-dot
