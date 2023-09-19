@@ -10,7 +10,7 @@ body {
   @media (min-width: 1025px){
 	  &.screen-active3 {
 		  .main {
-			    background: url("../images/screen3/bg.png") center / cover no-repeat;
+			    background: url("../images/screen3/bg.webp") center / cover no-repeat;
 			}
 		}
 	}
@@ -504,7 +504,7 @@ body * {
   left: 50%;
   width: 930px;
   height: 860px;
-  background: url("../images/screen1/pattern.png") 0 0 / 100% 100% no-repeat;
+  background: url("../images/screen1/pattern.webp") 0 0 / 100% 100% no-repeat;
   z-index: 2;
   transform: translate(-50%, -50%) rotate(14deg);
   @media (max-width: 1919px) {

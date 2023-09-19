@@ -16,6 +16,9 @@ const pug = require('gulp-pug');
 const rigger = require('gulp-rigger');
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
+const extReplace = require("gulp-ext-replace");
+const webp = require("imagemin-webp");
+
 
 function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
@@ -78,24 +81,37 @@ function fonts() {
 		.pipe(dest('public/fonts/'))
 }
 
-function images() {
-	return src('src/images/**/*')
-		.pipe(plumber())
-		.pipe(newer('public/images/'))
-		.pipe(imagemin([
-			imagemin.gifsicle({interlaced: true}),
-			imagemin.mozjpeg({quality: 75, progressive: true}),
-			imagemin.optipng({optimizationLevel: 5}),
-			imagemin.svgo({
-				plugins: [
-					{removeViewBox: false},
-					{cleanupIDs: false}
-				]
-			})
-		]))
-		.pipe(dest('public/images/'))
-		.pipe(browserSync.stream())
+
+function imagesSvg() {
+    return src('src/images/**/*.svg')
+        .pipe(plumber())
+        .pipe(newer('public/images/'))
+        .pipe(imagemin([
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: false},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(dest('public/images/'))
+        .pipe(browserSync.stream())
 }
+
+function images() {
+    return src('src/images/**/*.{jpg,png,jpeg}')
+        .pipe(plumber())
+        .pipe(newer('public/images/'))
+        .pipe(imagemin([
+            webp({
+                quality: 75
+            })
+        ]))
+        .pipe(extReplace(".webp"))
+        .pipe(dest('public/images/'))
+        .pipe(browserSync.stream())
+}
+
 
 function icons() {
 	return src('src/sprite/**/*.svg')
@@ -135,8 +151,9 @@ exports.scripts = scripts;
 exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
+exports.imagesSvg = imagesSvg;
 exports.icons = icons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, imagesSvg, images, icons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, imagesSvg, images, icons, browsersync, startwatch);
