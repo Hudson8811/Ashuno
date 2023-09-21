@@ -6,9 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <style>body{-webkit-transition:.7s;-o-transition:.7s;transition:.7s;opacity:0;-webkit-animation:0s linear .3s forwards all-fade;animation:0s linear .3s forwards all-fade}body.disable-scroll::-webkit-scrollbar{width:0;height:0}@media (min-width:1025px){body.screen-active3 .main{background:url("../images/screen3/bg.webp") center/cover no-repeat}}@-webkit-keyframes all-fade{0%{opacity:0}100%{opacity:1}}@keyframes all-fade{0%{opacity:0}100%{opacity:1}}body .preload{position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;overflow:hidden;background-color:#d61f24;-webkit-animation:.7s 3.3s forwards preload-hide;animation:.7s 3.3s forwards preload-hide;-webkit-clip-path:circle(100% at 50% 50%);clip-path:circle(100% at 50% 50%)}body .preload__body{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}body .preload__titles{position:relative;-webkit-animation:.3s 1s forwards titles-shown;animation:.3s 1s forwards titles-shown;opacity:0}body .preload__title{text-align:center;color:#fff;font-style:italic;font-size:200px}body .preload__title--withoutanim{-webkit-animation:2s 1.2s forwards preload-title-up;animation:2s 1.2s forwards preload-title-up}body .preload__title--anim{position:absolute;top:0;left:50%;width:100%;height:100%;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);-webkit-animation:1s 1.2s forwards preload-title-zoom;animation:1s 1.2s forwards preload-title-zoom}body .preload__subtitle{margin-top:100px;color:#fff;font-size:40px;text-align:center;-webkit-animation:.3s 1s forwards titles-shown;animation:.3s 1s forwards titles-shown;opacity:0}@media (max-width:1919px){body .preload__title{font-size:10.42vw}body .preload__subtitle{margin-top:5.21vw;font-size:2.08vw}}@-webkit-keyframes titles-shown{0%{opacity:0}100%{opacity:1}}@keyframes titles-shown{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes preload-hide{100%{opacity:0;visibility:hidden;pointer-events:none}}@-webkit-keyframes preload-title-up{0%{-webkit-transform:translate(0,100%) scale(1.1);transform:translate(0,100%) scale(1.1);opacity:0}40%,60%{-webkit-transform:translate(0,0) scale(1.1);transform:translate(0,0) scale(1.1);opacity:1}80%{opacity:1}100%{-webkit-transform:translate(0,50%) scale(2);transform:translate(0,50%) scale(2);opacity:0}}@keyframes preload-title-up{0%{-webkit-transform:translate(0,100%) scale(1.1);transform:translate(0,100%) scale(1.1);opacity:0}40%,60%{-webkit-transform:translate(0,0) scale(1.1);transform:translate(0,0) scale(1.1);opacity:1}80%{opacity:1}100%{-webkit-transform:translate(0,50%) scale(2);transform:translate(0,50%) scale(2);opacity:0}}@-webkit-keyframes preload-title-zoom{0%{-webkit-transform:translate(-50%,0) scale(1);transform:translate(-50%,0) scale(1);opacity:1}100%{-webkit-transform:translate(-50%,0) scale(8);transform:translate(-50%,0) scale(8);opacity:0}}@keyframes preload-title-zoom{0%{-webkit-transform:translate(-50%,0) scale(1);transform:translate(-50%,0) scale(1);opacity:1}100%{-webkit-transform:translate(-50%,0) scale(8);transform:translate(-50%,0) scale(8);opacity:0}}@keyframes preload-hide{0%{opacity:1;visibility:visible;pointer-events:auto;-webkit-clip-path:circle(100% at 50% 50%);clip-path:circle(100% at 50% 50%)}99%{opacity:1;visibility:visible;pointer-events:auto}100%{pointer-events:none;opacity:0;visibility:hidden;pointer-events:none;-webkit-clip-path:circle(0% at 65% 50%);clip-path:circle(0% at 65% 50%)}}body .main{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}body .screens{position:relative}</style>
-    <noscript>
-      <link href="css/main.min.css" rel="stylesheet">
-    </noscript>
+    <link href="css/main.min.css" rel="stylesheet">
     <link rel="preload" href="images/screen1/pattern.webp" as="image">
     <title>Главная</title>
   </head>
@@ -748,14 +746,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      window.addEventListener('load', function() {
-      		var link = document.createElement('link');
-      			link.rel = 'stylesheet';
-      		link.href = 'css/main.min.css';
-      		document.head.appendChild(link);
-      });
-    </script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

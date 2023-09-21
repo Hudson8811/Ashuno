@@ -11,10 +11,7 @@ html(lang="ru")
 		meta(name="keywords" content="")
 
 		include ../partials/__preload-styles
-
-		//-link(href="css/main.min.css" rel="stylesheet" media="print" onload="this.media='all'")
-		noscript
-			link(href="css/main.min.css" rel="stylesheet")
+		link(href="css/main.min.css" rel="stylesheet")
 
 		link(rel="preload" href="images/screen1/pattern.webp" as="image")
 
@@ -34,13 +31,6 @@ html(lang="ru")
 		block modals
 
 
-		script
-			| window.addEventListener('load', function() {
-			|		var link = document.createElement('link');
-			|			link.rel = 'stylesheet';
-			|		link.href = 'css/main.min.css';
-			|		document.head.appendChild(link);
-			| });
 
 		script(src="js/main.min.js")
 
